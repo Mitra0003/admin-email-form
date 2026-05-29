@@ -55,6 +55,7 @@ function buildEmail(submission) {
 
   const rows = [
     ["Nama", submission.name],
+    ["Nama pendek", submission.shortName],
     ["Alamat", submission.address],
     ["Dikirim", submittedAt]
   ];

@@ -4,12 +4,14 @@ const message = document.querySelector("#formMessage");
 
 const fields = {
   name: document.querySelector("#nameInput"),
+  shortName: document.querySelector("#shortNameInput"),
   address: document.querySelector("#addressInput"),
   consent: document.querySelector("#consentInput")
 };
 
 const errors = {
   name: document.querySelector("#nameError"),
+  shortName: document.querySelector("#shortNameError"),
   address: document.querySelector("#addressError")
 };
 
@@ -33,6 +35,7 @@ form.addEventListener("submit", async (event) => {
       },
       body: JSON.stringify({
         name: fields.name.value,
+        shortName: fields.shortName.value,
         address: fields.address.value
       })
     });

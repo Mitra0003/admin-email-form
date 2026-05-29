@@ -6,12 +6,19 @@ export function validateSubmission(payload) {
   }
 
   const name = normalizeText(payload.name);
+  const shortName = normalizeText(payload.shortName);
   const address = normalizeText(payload.address);
 
   if (name.length < 2) {
     errors.name = "Nama minimal 2 karakter.";
   } else if (name.length > 80) {
     errors.name = "Nama maksimal 80 karakter.";
+  }
+
+  if (shortName.length < 2) {
+    errors.shortName = "Nama pendek minimal 2 karakter.";
+  } else if (shortName.length > 40) {
+    errors.shortName = "Nama pendek maksimal 40 karakter.";
   }
 
   if (!address) {
@@ -28,6 +35,7 @@ export function validateSubmission(payload) {
     ok: true,
     data: {
       name,
+      shortName,
       address
     }
   };
