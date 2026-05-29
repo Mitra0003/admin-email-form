@@ -1,11 +1,8 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const appDir = path.dirname(__dirname);
-
-loadEnvFile(path.join(appDir, ".env"));
+loadEnvFile(path.join(process.cwd(), ".env"));
+loadEnvFile(path.join(process.cwd(), "admin-email-form", ".env"));
 
 export const config = {
   port: numberFromEnv("PORT", 18200),
