@@ -1,0 +1,3 @@
+/api/submissions  /.netlify/functions/submissions  200
+/api/health  /.netlify/functions/health  200
+/api/admin/health  /.netlify/functions/admin-health  200

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check server.mjs"
+    "check": "node --check server.mjs && node --check netlify/functions/_shared.mjs && node --check netlify/functions/health.mjs && node --check netlify/functions/admin-health.mjs && node --check netlify/functions/submissions.mjs"
   },
   "engines": {
     "node": ">=20"

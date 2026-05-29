@@ -13,7 +13,7 @@ Buka `http://localhost:18200`.
 
 ## Deploy
 
-Untuk deploy permanen, lihat `../DEPLOY_RENDER.md`.
+Untuk deploy permanen ke Netlify Free, lihat `../DEPLOY_NETLIFY.md`.
 
 ## Mengirim Email Sungguhan
 
