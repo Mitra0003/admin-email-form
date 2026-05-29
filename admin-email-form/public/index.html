@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Data Admin</title>
+  <meta name="description" content="Form nama dan alamat yang dikirim ke email admin.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="form-panel" aria-labelledby="formTitle">
+      <p class="eyebrow">Form admin</p>
+      <h1 id="formTitle">Kirim data user</h1>
+
+      <form id="adminForm" class="admin-form" novalidate>
+        <label class="field">
+          <span>Nama</span>
+          <input id="nameInput" name="name" type="text" maxlength="80" autocomplete="name" required>
+          <small id="nameError"></small>
+        </label>
+
+        <label class="field">
+          <span>Alamat</span>
+          <input id="addressInput" name="address" type="text" maxlength="240" autocomplete="street-address" required>
+          <small id="addressError"></small>
+        </label>
+
+        <label class="consent-check">
+          <input id="consentInput" type="checkbox" required>
+          <span>Saya setuju data ini dikirim ke admin.</span>
+        </label>
+
+        <button class="submit-button" id="submitButton" type="submit">Kirim ke Admin</button>
+      </form>
+
+      <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
